@@ -4,6 +4,10 @@ root@codespaces-010fd0:/workspaces/vsd-riscv2/samples# spike pk sum1ton.o
 bbl loader
 Sum from 1 to 9 is 45 
 ```
+## Environment used
+  * Codespace + local setup (partial)
+  * Currently running on wsl linux and spike is in the compilation phase 
+
 ## Where is the RISC-V program located in the vsd-riscv2 repository?
 * at Samples directory
 
