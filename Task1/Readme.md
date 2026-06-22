@@ -1,23 +1,30 @@
-## Program Execution Test
-```
-root@codespaces-010fd0:/workspaces/vsd-riscv2/samples# spike pk sum1ton.o
-bbl loader
-Sum from 1 to 9 is 45 
-```
-## Environment used
-  * Codespace + local setup (partial)
-  * Currently running on wsl linux and spike is in the compilation phase 
 
-## Where is the RISC-V program located in the vsd-riscv2 repository?
-* at Samples directory
+## What is a firmware library?
+* A low level software, that provides low level control access to any device hardware
+* Provides a low-level interface for firmware application/software
+  
+## Why APIs are important in embedded systems?
+* To make the system more atomic or modular
+* As in embedded systems, it is quite often to communicate with protocol drivers and it is useful if they expose APIs
+* Provides an abstraction for hardware/software codesign
 
-## How is the program compiled and loaded into memory?
-* Compiled through riscv64-unknown-elf-gcc compiler and creates the object file
-* Spike riscv simulator, takes the object file and load into the memory
-  
-## How does the RISC-V core access memory and memory-mapped IO?
-* RISC-V core accesses memory and memory-mapped IO through instructions provided at the execution level. Moreover, there is no special instruction for accessing memory-mapped IO.
-* The load, store instruction used for accessing memory, can also be used for MMIO
-  
-## Where would a new FPGA IP block logically integrate in this system?
-* In this system, we can use memory-mapped IO to integrate and communicate with IP
+## What was understood from the lab code?
+The code emulates the general-purpose-input-output (GPIO) behaviour. 
+* Initializes the LED pin as output ( can be used for displaying status like blinking or ON/OFF)
+* Initializes the Button pin as Input ( to capture the status of use buttons)
+* turn-on the LED
+* it captures/read the button state
+* turn-off the LED
+* In-short toggles the LED one time
+
+## Successful compilation
+```
+wsluser@ISCN5CG4202696:/mnt/c/Users/saleemmehmoo/riscv-internship/vsdsquadron-mini-core/task1$ ./task1_demo
+Starting firmware application
+GPIO 5 initialized as OUTPUT
+GPIO 3 initialized as INPUT
+GPIO 5 write value: 1
+GPIO 3 read value
+Button state: 1
+GPIO 5 write value: 0
+```
