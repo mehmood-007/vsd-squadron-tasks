@@ -1,1 +1,1 @@
-RISC-V FPGA IP Development Internship
+VSD Squadron Internship
