@@ -19,6 +19,7 @@ The code emulates the general-purpose-input-output (GPIO) behaviour.
 
 ## Successful compilation
 ```
+wsluser@ISCN5CG4202696:/mnt/c/Users/saleemmehmoo/riscv-internship/vsdsquadron-mini-core/task1$ gcc main.c gpio.c -o task1_demo
 wsluser@ISCN5CG4202696:/mnt/c/Users/saleemmehmoo/riscv-internship/vsdsquadron-mini-core/task1$ ./task1_demo
 Starting firmware application
 GPIO 5 initialized as OUTPUT
